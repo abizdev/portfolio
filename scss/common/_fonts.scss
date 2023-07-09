@@ -1,0 +1,12 @@
+// drukwide
+@font-face {
+  font-family: 'drukwide';
+  src: url('../fonts/drukwide/Druk-Wide-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+// montserrat
+$montserrat: ('Regular', 400) ('Medium', 500);
+@each $name, $weight in $montserrat {
+  @include FontFace('montserrat', 'montserrat/Montserrat-', $name, 'ttf', 'truetype', $weight)
+}

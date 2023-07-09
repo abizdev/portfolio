@@ -9,35 +9,56 @@
 </head>
 <body>
   
-  <div class="cursor"></div>
-  
-  <nav class="navbar">
-    <div class="navbar__content container">
-      <a href="#!" class="navbar--logo">loremlor</a>
-      <ul class="navbar__list">
-        <li><a href="#!">home</a></li>
-        <li><a href="#!">about</a></li>
-        <li><a href="#!">portfolio</a></li>
-        <li><a href="#!">contacts</a></li>
-      </ul>
-      <div class="navbar__burger">
-        <span class="navbar__burger--text">menu</span>
-        <div class="navbar__burger--items">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+  <!-- wrapper & content for smooth scrolling -->
+  <div class="wrapper">
+    <div class="content">
+      
+      <!-- header -->
+      <header class="header">
+        <video autoplay muted loop>
+          <source src="video/stock-bg.mp4" type="video/mp4" >
+        </video>
+        <div class="header__content">
+          <nav class="navbar">
+            <div class="navbar__content container">
+              <a href="#!" class="logo">dreamweb</a>
+              <ul class="navbar__list">
+                <li><a href="#!" class="link">home</a></li>
+                <li><a href="#!" class="link">about</a></li>
+                <li><a href="#!" class="link">portfolio</a></li>
+                <li><a href="#!" class="link">contacts</a></li>
+              </ul>
+              <div class="navbar__burger">
+                <span class="navbar__burger--text">menu</span>
+                <div class="navbar__burger--items">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <article class="header__info container">
+            <h1 class="header--title"><span>Hello world</span></h1>
+            <h2 class="header__sub--title"><span><small>I'm</small> Front-end developer</span></h2>
+            <!-- <h2 class="header__sub--title"><span>Abdulaziz Pulatov</span></h2>  -->
+          </article>
         </div>
-      </div>
+      </header>
+      <!-- header end -->
     </div>
-  </nav>
+  </div>
   
   
+  <script src="js/libs/ScrollSmoother.min.js"></script>
+  <script src="js/libs/ScrollTrigger.min.js"></script>
+  <script src="js/libs/gsap.min.js"></script>+
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+  }
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $background;
+  }
+  
+  &__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+  }
+  
+  &__sub--title,
+  &--title {
+    color: $white;
+    font-family: $d;
+    font-weight: 700;
+    overflow: hidden;
+    small {
+      font-size: 19px;
+    }
+    span {
+      display: block;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+    @include media(576) {
+      text-align: center;
+    }
+  }
+  
+  &--title {
+    font-size: 100px;
+    @include media(992) {font-size: 65px;}
+    @include media(576) {font-size: 40px;}
+  }
+  
+  &__sub--title {
+    font-size: 45px;
+    font-family: $m;
+    font-weight: 500;
+    @include media(992) {font-size: 30px;}
+    @include media(576) {font-size: 23px;}
+  }
+}

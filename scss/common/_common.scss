@@ -35,6 +35,11 @@ $dark-bg-gradient: var(--dark-bg-gradient);
   font-family: var(--m);
   font-weight: 400;
 }
+*::before,
+*::after {
+  font-family: 'icons';
+  font-weight: 400;
+}
 body {
   background: $background;
   position: relative;
@@ -52,8 +57,20 @@ body {
 a {
   text-decoration: none;
 }
-ul {
+li {
   list-style: none;
+}
+// icons
+.icon {
+  &--close::before {content: '\f00d';}
+  
+  &--arrow-right::before {content: '\f061';}
+  &--arrow-left::before {content: '\f060';}
+  &--chevron-down::before {content: '\f060';}
+  
+  &--telegram::before {content: '\f2c6';}
+  &--instagram::before {content: '\f16d';}
+  &--linkedin::before {content: '\f08c';}
 }
 .container {
   max-width: 1320px;

@@ -7,6 +7,11 @@
 
 // montserrat
 $montserrat: ('Regular', 400) ('Medium', 500);
+$icons: ('light-300', 300), ('regular-400', 400), ('brands-400', 400), ('solid-900', 900), ('duotone-900', 900);
+
 @each $name, $weight in $montserrat {
   @include FontFace('montserrat', 'montserrat/Montserrat-', $name, 'ttf', 'truetype', $weight)
+}
+@each $name, $weight in $icons {
+  @include FontFace('icons', 'webfonts/fa-', $name, 'ttf', 'truetype', $weight)
 }

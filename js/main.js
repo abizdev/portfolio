@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 console.log(gsap);
 if(ScrollTrigger.isTouch !== 1) {
@@ -11,8 +12,8 @@ if(ScrollTrigger.isTouch !== 1) {
   
   
 }
-gsap.fromTo('.header--title span', {y: '110%'}, {y: 0, ease: "Power4.easeOut", duration: 2 }, '<')
-gsap.fromTo('.header__sub--title span', {y: '110%'}, {y: 0, ease: "Power4.easeOut", duration: 2 }, '<')
+gsap.fromTo('.go-up span', {y: '110%'}, {y: 0, ease: "Power4.easeOut", duration: 2 }, '<')
+// gsap.fromTo('.header__sub--title span', {y: '110%'}, {y: 0, ease: "Power4.easeOut", duration: 2 }, '<')
 // gsap.fromTo('.header__sub--title span', {y: '110%'}, {y: 0, ease: "Power4.easeOut", duration: 2 }, '<')
 
 const menu = document.querySelector('.menu')

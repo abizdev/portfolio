@@ -1,0 +1,47 @@
+.about {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  
+  img {
+    width: 60%;
+    height: 700px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+    background: linear-gradient(90deg, #000000 40%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 90%);
+    
+    &--title {
+      span {
+        font-size: 50px;
+        line-height: 59px;
+        color: $white;
+        font-family: $d;
+        font-weight: 700;
+      }
+    }
+    &--info {
+      max-width: 935px;
+      width: 100%;
+      span {
+        font-size: 20px;
+        line-height: 30px;
+        color: $white;
+      }
+    }
+  }
+}

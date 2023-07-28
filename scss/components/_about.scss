@@ -10,6 +10,12 @@
     position: absolute;
     top: 0;
     right: 0;
+    @include media(992) {
+      width: 100%;
+    }
+    @include media(576) {
+      width: 160%;
+    }
   }
   &__content {
     position: absolute;
@@ -24,23 +30,40 @@
     padding: 50px;
     gap: 30px;
     background: linear-gradient(90deg, #000000 40%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 90%);
+    @include media(992) {
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      padding: 50px 15px;
+      background: linear-gradient(0deg, #000000 15%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 90%);
+    }
     
     &--title {
+      overflow: hidden;
       span {
         font-size: 50px;
         line-height: 59px;
         color: $white;
         font-family: $d;
         font-weight: 700;
+        @include media(768) {
+          font-size: 35px;
+          line-height: 40px;
+        }
       }
     }
     &--info {
       max-width: 935px;
       width: 100%;
+      overflow: hidden;
       span {
         font-size: 20px;
         line-height: 30px;
         color: $white;
+        @include media(768) {
+          font-size: 16px;
+          line-height: 19px;
+        }
       }
     }
   }

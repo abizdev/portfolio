@@ -1,6 +1,5 @@
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-console.log(gsap);
 if(ScrollTrigger.isTouch !== 1) {
   
   ScrollSmoother.create({

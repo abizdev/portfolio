@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>lorem</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 <body>
   
@@ -89,6 +90,7 @@
       <!-- header end -->
       <!-- main -->
       <main>
+        <!-- about -->
         <section class="about">
           <img src="images/about-2.jpg" alt="about" class="about--bg">
           <div class="about__content">
@@ -96,15 +98,64 @@
             <p class="about__content--info"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit magni voluptatum eius sapiente quidem, adipisci excepturi et tempora illum vel iure, quo assumenda suscipit natus ab id quas laborum.</span></p>
           </div>
         </section>
+        <!-- about end -->
+        <!-- skills -->
+        <section class="skills">
+          <div class="skills--slider skills-front">
+            <div class="skills--slider__content">
+              <div class="skills--slide">javascript</div>
+              <div class="skills--slide">vue js</div>
+              <div class="skills--slide">gsap</div>
+              <div class="skills--slide">vuex</div>
+              <div class="skills--slide">sass</div>
+              <div class="skills--slide">vue router</div>
+              <div class="skills--slide">pinia</div>
+            </div>
+            <div class="skills--slider__content">
+              <div class="skills--slide">javascript</div>
+              <div class="skills--slide">vue js</div>
+              <div class="skills--slide">gsap</div>
+              <div class="skills--slide">vuex</div>
+              <div class="skills--slide">sass</div>
+              <div class="skills--slide">vue router</div>
+              <div class="skills--slide">pinia</div>
+            </div>
+          </div>
+          <div class="skills--slider skills-back">
+            <div class="skills--slider__content">
+              <div class="skills--slide">node js</div>
+              <div class="skills--slide">express</div>
+              <div class="skills--slide">sql</div>
+              <div class="skills--slide">typescript</div>
+              <div class="skills--slide">modngodb</div>
+              <div class="skills--slide">graphql</div>
+              <div class="skills--slide">docker</div>
+              <div class="skills--slide">aws</div>
+            </div>
+            <div class="skills--slider__content">
+              <div class="skills--slide">node js</div>
+              <div class="skills--slide">express</div>
+              <div class="skills--slide">sql</div>
+              <div class="skills--slide">typescript</div>
+              <div class="skills--slide">modngodb</div>
+              <div class="skills--slide">graphql</div>
+              <div class="skills--slide">docker</div>
+              <div class="skills--slide">aws</div>
+            </div>
+          </div>
+        </section>
+        <!-- skills end -->
       </main>
       <!-- main end -->
     </div>
   </div>
   
   
-  <script src="js/libs/ScrollSmoother.min.js"></script>
-  <script src="js/libs/ScrollTrigger.min.js"></script>
-  <script src="js/libs/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/libs/gsap/ScrollSmoother.min.js"></script>
+  <script src="js/libs/gsap/ScrollTrigger.min.js"></script>
+  <script src="js/libs/gsap/gsap.min.js"></script>
+  <script src="js/sliders.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

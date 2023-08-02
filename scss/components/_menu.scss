@@ -5,13 +5,17 @@
   padding: 25px 0;
   position: fixed;
   top: 0;
-  opacity: 0;
   z-index: 100;
-  transform: translateX(-110%);
+  clip-path: inset(0 0 100%);
   transition: 0.75s ease-in;
   &.active {
-    opacity: 1;
-    transform: translateX(0);
+    clip-path: inset(0 0 0%);
+    @include media(768) {
+      overflow: auto;
+    }
+    body {
+      overflow: hidden;
+    }
   }
   
   &__content {
@@ -19,6 +23,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+    @include media(768) {
+      height: unset;
+    }
     
     &--top {
       display: flex;
@@ -42,6 +49,7 @@
       @include media(768) {
         flex-direction: column-reverse;
         align-items: flex-start;
+        row-gap: 50px;
       }
     }
   }
@@ -51,6 +59,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @include media(768) {
+      row-gap: 20px;
+    }
     
     &--item {
       display: flex;
@@ -70,7 +81,10 @@
         font-family: $d;
         font-weight: 700;
         overflow: hidden;
-        @include media(576)
+        @include media(576) {
+          font-size: 17px;
+          line-height: 25px;
+        }
       }
     }
     &--socials {
@@ -78,7 +92,7 @@
       align-items: center;
       gap: 30px;
       
-      .icon {        
+      .icon {
         &--telegram::before,
         &--instagram::before,
         &--linkedin::before {
@@ -96,10 +110,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @include media(768) {
+      row-gap: 20px;
+    }
     
     .link {
       font-size: 50px;
       line-height: 66px;
+      @include media(768) {
+        font-size: 35px;
+        line-height: 40px;
+      }
     }
   }
   

@@ -50,7 +50,7 @@
   &--title {
     font-size: 100px;
     @include media(992) {font-size: 65px;}
-    @include media(576) {font-size: 40px;}
+    @include media(576) {font-size: 35px;}
   }
   
   &__sub--title {

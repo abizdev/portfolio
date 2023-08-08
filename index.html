@@ -53,6 +53,7 @@
       <!-- header -->
       <header class="header" id="home">
         <video autoplay muted>
+          <source src="video/stock-bg.webm" type="video/webm">
           <source src="video/stock-bg.mp4" type="video/mp4" >
         </video>
         <div class="header__content">
@@ -92,7 +93,11 @@
       <main>
         <!-- about -->
         <section class="about" id="about">
-          <img src="images/about-2.jpg" alt="about" class="about--bg">
+          <picture>
+            <source srcset="images/about-2.webp" type="image/webp">
+            <source srcset="images/about-2.jpg" type="image/jpg">
+            <img src="images/about-2.webp" alt="about" class="about--bg">
+          </picture>
           <div class="about__content">
             <h2 class="about__content--title"><span>Abdulaziz Pulatov</span></h2>
             <p class="about__content--info"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit magni voluptatum eius sapiente quidem, adipisci excepturi et tempora illum vel iure, quo assumenda suscipit natus ab id quas laborum.</span></p>

@@ -14,10 +14,7 @@ function menuClose() {
 }
 
 let pageWidth = window.innerWidth
-console.log(window.innerWidth);
-window.addEventListener('scroll', () => {
-  console.log(window.pageYOffset);
-})
+
 const links = document.querySelectorAll('.link')
 links.forEach((link, key) => {
   const scrollToElement = link.getAttribute('data-scroll')

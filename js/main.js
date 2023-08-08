@@ -1,37 +1,40 @@
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-if(ScrollTrigger.isTouch !== 1) {
-  
-  ScrollSmoother.create({
-    wrapper: '.wrapper',
-    content: '.content',
-    smooth: 1.5,
-    effects: true,
-  })
-  
-  
-}
-gsap.fromTo('.go-up span', {y: '110%'}, {y: 0, ease: "Power4.easeOut", duration: 2 }, '<')
-
 const menu = document.querySelector('.menu')
 const menuOpenBtn = document.querySelector('.navbar__burger')
 const menuCloseBtn = document.querySelector('.menu__close')
-
-menuOpenBtn.addEventListener('click', () => { 
+// menu open
+function menuOpen() {
+  document.body.style.overflow = 'hidden'
   menu.classList.add('active')
+}
+// menu close
+function menuClose() {
+  document.body.style.overflow = 'unset'
+  menu.classList.remove('active')
+}
+
+let pageWidth = window.innerWidth
+console.log(window.innerWidth);
+window.addEventListener('scroll', () => {
+  console.log(window.pageYOffset);
 })
-menuCloseBtn.addEventListener('click', () => {
-  menu.classList.remove('active') 
+const links = document.querySelectorAll('.link')
+links.forEach((link, key) => {
+  const scrollToElement = link.getAttribute('data-scroll')
+  
+  link.addEventListener('click', () => {
+    if(scrollToElement == 'home' && pageWidth >= 576) {
+      window.scrollBy(0, 0)
+    } else if(scrollToElement == 'about' && pageWidth >= 576) {
+      window.scrollBy(0, 720)
+    } else if(scrollToElement == 'portfolio' && pageWidth >= 576) {
+      window.scrollBy(0, 1700)
+    } else if(scrollToElement == 'contacts' && pageWidth >= 576) {
+      window.scrollBy(0, 2332)
+    }
+    menuClose()
+  })
 })
 
-// about section
-const tlAbout = gsap.timeline({
-  scrollTrigger:{
-    trigger: '.about',
-    start: '-70%',
-    end: '0%',
-  }
-})
-tlAbout.fromTo('.about--bg', { opacity: 0 }, { opacity: 1, ease: "Power4.easeOut", duration: 2.35 }, )
-tlAbout.fromTo('.about__content--title span', {y: '110%'}, {y: 0, ease: "Power4.easeOut", duration: 1.75 }, '<20%')
-tlAbout.fromTo('.about__content--info span', { opacity: 0,}, { opacity: 1, ease: "Power4.easeOut", duration: 1.75 }, '<')
+menuOpenBtn.addEventListener('click', menuOpen)
+menuCloseBtn.addEventListener('click', menuClose)

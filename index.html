@@ -35,10 +35,10 @@
         </div>
         <nav class="menu__nav">
           <ul class="menu__list">
-            <li><a href="#!" class="link">home</a></li>
-            <li><a href="#!" class="link">about</a></li>
-            <li><a href="#!" class="link">portfolio</a></li>
-            <li><a href="#!" class="link">contacts</a></li>
+            <li><a href="#!" class="link" data-scroll="home">home</a></li>
+            <li><a href="#!" class="link" data-scroll="about">about</a></li>
+            <li><a href="#!" class="link" data-scroll="portfolio">portfolio</a></li>
+            <li><a href="#!" class="link" data-scroll="contacts">contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -51,7 +51,7 @@
     <div class="content">
       
       <!-- header -->
-      <header class="header">
+      <header class="header" id="home">
         <video autoplay muted>
           <source src="video/stock-bg.mp4" type="video/mp4" >
         </video>
@@ -60,10 +60,10 @@
             <div class="navbar__content container">
               <a href="#!" class="logo">loremlor</a>
               <ul class="navbar__list">
-                <li><a href="#!" class="link">home</a></li>
-                <li><a href="#!" class="link">about</a></li>
-                <li><a href="#!" class="link">portfolio</a></li>
-                <li><a href="#!" class="link">contacts</a></li>
+                <li><a href="#!" class="link" data-scroll="home">home</a></li>
+                <li><a href="#!" class="link" data-scroll="about">about</a></li>
+                <li><a href="#!" class="link" data-scroll="portfolio">portfolio</a></li>
+                <li><a href="#!" class="link" data-scroll="contacts">contacts</a></li>
               </ul>
               <div class="navbar__burger">
                 <span class="navbar__burger--text">menu</span>
@@ -91,7 +91,7 @@
       <!-- main -->
       <main>
         <!-- about -->
-        <section class="about">
+        <section class="about" id="about">
           <img src="images/about-2.jpg" alt="about" class="about--bg">
           <div class="about__content">
             <h2 class="about__content--title"><span>Abdulaziz Pulatov</span></h2>
@@ -146,7 +146,7 @@
         </section>
         <!-- skills end -->
         <!-- portfolio -->
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
           <div class="portfolio__content">
             <div class="swiper slider slider1">
               <div class="swiper-wrapper slider__wrapper">
@@ -235,10 +235,9 @@
           </div>
         </section>
         <!-- portfolio end -->
-      </main>
       <!-- main end -->
       <!-- footer -->
-      <footer class="footer">
+      <footer class="footer" id="contacts">
         <div class="footer__content container">
           <div class="footer--item footer__office">
             <h5>Office:</h5>
@@ -267,6 +266,7 @@
   <script src="js/libs/gsap/ScrollSmoother.min.js"></script>
   <script src="js/libs/gsap/ScrollTrigger.min.js"></script>
   <script src="js/libs/gsap/gsap.min.js"></script>
+  <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
   <script src="js/portfolio-swiper.js"></script>
 </body>

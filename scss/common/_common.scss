@@ -50,6 +50,7 @@ $dark-bg-gradient: var(--dark-bg-gradient);
 body {
   background: $black;
   position: relative;
+  scroll-behavior: smooth;
   
   &::-webkit-scrollbar {
     width: 6.5px;

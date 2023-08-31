@@ -1,14 +1,14 @@
 document.querySelectorAll('.slider').forEach((n, i) => {
 	window[`slider${i+1}`] = new Swiper(n, {
-		freeMode: true,
+		// freeMode: true,
 		slidesPerView: 3,
 		spaceBetween: 30,
-		loop: true,
-		autoplay: {
-			delay: 0,
-			disableOnInteraction: false
-		},
-		speed: 50000,
+		// loop: true,
+		// autoplay: {
+		// 	delay: 0,
+		// 	disableOnInteraction: false
+		// },
+		// speed: 50000,
 		// response
 		breakpoints: {
 			320: {
